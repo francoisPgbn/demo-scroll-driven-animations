@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, QueryList, ViewChildren, viewChildren } from '@angular/core';
 
 import { Faker } from '../../shared/faker';
 
@@ -11,4 +11,11 @@ import { Faker } from '../../shared/faker';
 })
 export class Section1Component {
   fakers = Faker.slice(0,24);
+
+  @ViewChildren(Faker.map(i => i.id).join(', ')) children! : QueryList<ElementRef>;
+
+  ngAfterViewInit() {
+    console.log(this.children); // QueryList containing the two div elements
+  }
+
 }

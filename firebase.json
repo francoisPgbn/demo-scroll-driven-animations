@@ -1,0 +1,17 @@
+{
+  "hosting": {
+    "public": "dist/scroll-and-grid/browser",
+    "site": "fp-demo-scroll-driven-animations",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ]
+  }
+}
