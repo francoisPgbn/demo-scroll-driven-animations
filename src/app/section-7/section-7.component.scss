@@ -1,0 +1,58 @@
+.wrapper {
+  height: 400vh; 
+  position: relative;
+  overflow: clip;
+  view-timeline-name: --section__seven;
+  
+  background-color: #DDB37D;
+  transform: translate(0, 0);
+
+  .sticky {
+    width: 400vh;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    position: sticky;
+
+    animation: translateSticky linear both;
+    animation-timeline: --section__seven;
+    animation-range: contain 0% contain 100%;
+  }
+
+  .grid {
+    width: 100%;
+    height: 100vh;
+    padding: 0 8rem;
+    display: grid;
+    place-items: center;
+    align-content: center;
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 20rem;
+  }
+
+  .item {
+    max-height: 70rem;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+  }
+
+  .container {
+    color: rgb(20, 20, 20);;
+  }
+
+  .title {
+    font-size: 2.4rem;
+    text-transform: uppercase;
+  }
+  .subtitle {
+    font-size: 1.6rem;
+  }
+
+}
+
+@keyframes translateSticky {
+  to {
+    transform: translateX(calc(-100% + 100vw));
+  }
+}

@@ -1,0 +1,22 @@
+<div class="wrapper">
+  <div class="sticky">
+    <div class="container">
+      <div class="title">Quibusdam</div>
+      <div class="subtitle">ut id vero</div>
+    </div>
+    <div class="grid">
+      @for (faker of fakers; track $index) {
+
+      <div class="item">
+        <img
+          [src]="faker.src.portrait"
+          [alt]="faker.alt"
+          [id]="faker.id"
+          class="picture"
+        />
+      </div>
+
+      }
+    </div>
+  </div>
+</div>

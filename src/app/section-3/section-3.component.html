@@ -1,0 +1,22 @@
+<div class="wrapper">
+  <div class="sticky">
+    <div class="grid">
+      @for (faker of fakers; track $index) {
+      <img
+        [src]="faker.src.large"
+        [alt]="faker.alt"
+        [id]="faker.id"
+        class="item"
+      />
+      }
+      <div class="container">
+        <div class="title">Excepturi</div>
+        <div class="subtitle">ipsa harum ab</div>
+      </div>
+      <div class="container">
+        <div class="title">quibusdam</div>
+        <div class="subtitle">nam quia hic</div>
+      </div>
+    </div>
+  </div>
+</div>

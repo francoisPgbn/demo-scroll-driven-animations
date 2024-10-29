@@ -1,0 +1,142 @@
+@mixin animationItem {
+  animation: slideInSection1 ease-out both;
+  animation-timeline: --section__two;
+  animation-range: contain 0% contain var(--contain);
+}
+
+@mixin animationTitle {
+  animation: slideTitle ease-out both;
+  animation-timeline: --section__two;
+  animation-range: contain var(--contain-start) contain var(--contain-end);
+}
+
+.wrapper {
+  height: 300vh;
+  position: relative;
+  view-timeline-name: --section__two;
+
+  .sticky {
+    height: 100vh;
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    transform: translate(0, 0);
+  }
+
+  .grid {
+    width: 100%;
+    height: 100vh;
+    padding: 2rem 0;
+    display: grid;
+    place-items: center;
+    align-content: center;
+    grid-template-areas: "left . center . right";
+    grid-template-columns: 1fr auto 1fr auto 1fr;
+
+    @media (max-width: 700px) {
+      grid-template-areas: "left" "center" "right";
+      grid-template-columns: 1fr;
+    }
+    gap: 1rem;
+  }
+
+  .container {
+    color: white;
+
+    &:nth-child(6) {
+      grid-area: left;
+      --translate-item: -3rem 0;
+      --contain-start: 53%;
+      --contain-end: 90%;
+      @include animationTitle;
+    }
+    &:nth-child(7) {
+      grid-area: right;
+      --translate-item: 3rem 0;
+      --contain-start: 53%;
+      --contain-end: 90%;
+      @include animationTitle;
+    }
+  }
+
+  .title {
+    font-size: 2.4rem;
+    text-transform: uppercase;
+
+    @media (max-width: 1400px) {
+      font-size: 2rem;
+    }
+  }
+
+  .subtitle {
+    font-size: 1.6rem;
+    @media (max-width: 1400px) {
+      font-size: 1.4rem;
+    }
+  }
+
+  .item {
+    grid-area: center;
+    max-height: 50%;
+    aspect-ratio: 2/3;
+  }
+
+  .item:nth-child(1) {
+    --range: translate3d(0, 113vh, 0.1px) rotate(2.4deg);
+    --contain: 30%;
+
+    @include animationItem;
+  }
+
+  .item:nth-child(2) {
+    --range: translate3d(1rem, 113vh, 0.1px) rotate(-2.3deg);
+    --contain: 45%;
+
+    @include animationItem;
+  }
+
+  .item:nth-child(3) {
+    --range: translate3d(1.3rem, 113vh, 0.1px) rotate(-2.5deg);
+    --contain: 60%;
+
+    @include animationItem;
+  }
+
+  .item:nth-child(4) {
+    --range: translate3d(1.5rem, 113vh, 0.1px) rotate(-3.3deg);
+    --contain: 75%;
+
+    @include animationItem;
+  }
+
+  .item:nth-child(5) {
+    --range: translate3d(-2rem, 113vh, 0.1px) rotate(3.4deg);
+    --contain: 90%;
+
+    @include animationItem;
+  }
+}
+
+@keyframes slideInSection1 {
+  from {
+    transform: var(--range);
+    background-color: blue;
+  }
+  to {
+    translate: 0 0;
+    rotate: 0;
+    background-color: rgb(230, 230, 230);
+  }
+}
+
+@keyframes slideTitle {
+  from {
+    translate: var(--translate-item);
+    opacity: 0;
+  }
+  to {
+    translate: 0 0;
+    opacity: 1;
+  }
+}

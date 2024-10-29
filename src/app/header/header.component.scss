@@ -1,0 +1,85 @@
+.header {
+  height: 100vh;
+  position: relative;
+  overflow: clip;
+
+  &__background {
+    background-color: #ddb37d;
+    height: 100%;
+    display: grid;
+    place-items: center;
+    grid-template-areas: "stack";
+    position: relative;
+    animation: shrink linear both;
+    animation-timeline: view();
+    animation-range: contain 0% cover 100%;
+  }
+
+  &__bottom {
+    color: white;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    font-size: 15rem;
+    text-transform: uppercase;
+    overflow: hidden;
+    white-space: nowrap;
+    animation: translate linear both;
+    animation-timeline: view();
+    animation-range: contain 0% cover 100%;
+
+    
+    @media (max-width: 1400px) {
+      font-size: 10rem;
+    }
+  }
+
+  &__logo {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+  }
+
+  &__title {
+    color: white;
+    font-size: 3.2rem;
+
+    @media (max-width: 1400px) {
+      font-size: 2.4rem;
+    }
+  }
+
+  &__subtitle {
+    color: white;
+    font-size: 2.4rem;
+    
+    @media (max-width: 1400px) {
+      font-size: 1.6rem;
+    }
+  }
+}
+
+@keyframes shrink {
+  from {
+    margin: 0;
+  }
+  to {
+    margin: 0 8rem;
+    background-color: rgba(#ddb37d, 0.1);
+  }
+}
+
+@keyframes translate {
+  to {
+    left: -15%;
+    bottom: -30%;
+    color: rgba(white, 0.1);
+  }
+}

@@ -1,0 +1,217 @@
+@mixin animationItem {
+  animation: slideInSection1 ease-out both;
+  animation-timeline: --section__two;
+  animation-range: contain var(--start) contain var(--end);
+}
+
+.wrapper {
+  height: 300vh;
+  position: relative;
+  view-timeline-name: --section__two;
+  overflow: clip;
+
+  .sticky {
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    position: sticky;
+    transform: translate(0, 0);
+  }
+
+  .grid {
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    place-items: center;
+    align-content: center;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    gap: 0.5rem;
+  }
+
+  .item {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .item:nth-child(1) {
+    --range: translate3d(0, 0, -2rem) scale(0.7);
+    --end: 33%;
+    --start: 0%;
+
+    @include animationItem;
+  }
+
+  .item:nth-child(2) {
+    --range: translate3d(0, 0, -2rem) scale(0.7);
+    --end: 40%;
+    --start: 7%;
+
+    @include animationItem;
+  }
+
+  .item:nth-child(3) {
+    --range: translate3d(0, 0, -2rem) scale(0.7);
+    --end: 47%;
+    --start: 14%;
+
+    @include animationItem;
+  }
+
+  .item:nth-child(4) {
+    --range: translate3d(0, 0, -2rem) scale(0.7);
+    --end: 54%;
+    --start: 21%;
+
+    @include animationItem;
+  }
+
+  .item:nth-child(5) {
+    --range: translate3d(0, 0, -2rem) scale(0.7);
+    --end: 61%;
+    --start: 28%;
+
+    @include animationItem;
+  }
+
+  .item:nth-child(6) {
+    --range: translate3d(0, 0, -2rem) scale(0.7);
+    --end: 40%;
+    --start: 7%;
+
+    @include animationItem;
+  }
+
+  .item:nth-child(7) {
+    --range: translate3d(0, 0, -2rem) scale(0.7);
+    --end: 47%;
+    --start: 14%;
+
+    @include animationItem;
+  }
+
+  .item:nth-child(8) {
+    --range: translate3d(0, 0, -2rem) scale(0.7);
+    --end: 54%;
+    --start: 21%;
+
+    @include animationItem;
+  }
+
+  .item:nth-child(9) {
+    --range: translate3d(0, 0, -2rem) scale(0.7);
+    --end: 61%;
+    --start: 28%;
+
+    @include animationItem;
+  }
+
+  .item:nth-child(10) {
+    --range: translate3d(0, 0, -2rem) scale(0.7);
+    --end: 69%;
+    --start: 35%;
+
+    @include animationItem;
+  }
+
+  .item:nth-child(11) {
+    --range: translate3d(0, 0, -2rem) scale(0.7);
+    --end: 47%;
+    --start: 14%;
+
+    @include animationItem;
+  }
+
+  .item:nth-child(12) {
+    --range: translate3d(0, 0, -2rem) scale(0.7);
+    --end: 54%;
+    --start: 21%;
+
+
+    @include animationItem;
+  }
+
+  .item:nth-child(13) {
+    --range: translate3d(0, 0, -2rem) scale(0.7);
+    --end: 61%;
+    --start: 28%;
+
+    @include animationItem;
+  }
+
+  .item:nth-child(14) {
+    --range: translate3d(0, 0, -2rem) scale(0.7);
+    --end: 69%;
+    --start: 35%;
+
+    @include animationItem;
+  }
+
+  .item:nth-child(15) {
+    --range: translate3d(0, 0, -2rem) scale(0.7);
+    --end: 82%;
+    --start: 49%;
+
+    @include animationItem;
+  }
+
+  .item:nth-child(16) {
+    --range: translate3d(0, 0, -2rem) scale(0.7);
+    --end: 54%;
+    --start: 21%;
+
+
+    @include animationItem;
+  }
+
+  .item:nth-child(17) {
+    --range: translate3d(0, 0, -2rem) scale(0.7);
+    --end: 61%;
+    --start: 28%;
+
+    @include animationItem;
+  }
+
+  .item:nth-child(18) {
+    --range: translate3d(0, 0, -2rem) scale(0.7);
+    --end: 69%;
+    --start: 35%;
+
+    @include animationItem;
+  }
+
+  .item:nth-child(19) {
+    --range: translate3d(0, 0, -2rem) scale(0.7);
+    --end: 82%;
+    --start: 49%;
+
+    @include animationItem;
+  }
+
+  .item:nth-child(20) {
+    --range: translate3d(0, 0, -2rem) scale(0.7);
+    --end: 89%;
+    --start: 56%;
+
+    @include animationItem;
+  }
+}
+
+@keyframes slideInSection1 {
+  from {
+    transform: var(--range);
+    opacity: 0;
+  }
+
+  75% {
+    transform: translate3d(0, 0, 5rem) scale(1.05);
+  }
+
+  to {
+    translate: 0 0;
+    scale: 1;
+    opacity: 1;
+  }
+}

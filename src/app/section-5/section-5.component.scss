@@ -1,0 +1,335 @@
+@mixin animationItem {
+  animation: slideInSection1 ease-out both;
+  animation-timeline: --section__five;
+  animation-range: contain 0% contain var(--contain);
+}
+
+.wrapper {
+  height: 300vh;
+  position: relative;
+  view-timeline-name: --section__five;
+  overflow: clip;
+
+  .sticky {
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    position: sticky;
+    transform: translate(0, 0);
+  }
+
+  .grid {
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    place-items: center;
+    align-content: center;
+    grid-template-columns: repeat(9, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    gap: 0.5rem;
+  }
+
+  .item {
+    aspect-ratio: 1 / 1 ;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .item:nth-child(1) {
+    --range: translate3d(22rem, 16rem, 0) rotateX(100deg) rotateY(-120deg)
+      scale(0.005);
+    --contain: 65%;
+
+    @include animationItem;
+  }
+
+  .item:nth-child(2) {
+    --range: translate3d(5rem, 9rem, 0) rotateX(95deg) rotateY(-75deg)
+      scale(0.01);
+    --contain: 55%;
+
+    @include animationItem;
+  }
+
+  .item:nth-child(3) {
+    --range: translate3d(-12rem, -1rem, 90rem) rotateX(90deg) rotateY(-70deg)
+      scale(0.05);
+    --contain: 45%;
+
+    @include animationItem;
+  }
+
+  .item:nth-child(4) {
+    --range: translate3d(-20rem, -4rem, 0.1px) rotateX(80deg) rotateY(-40deg)
+      scale(0.2);
+    --contain: 35%;
+
+    @include animationItem;
+  }
+
+  .item:nth-child(5) {
+    --range: translate3d(-0.5rem, -20rem, 0.1px) rotateX(80deg) scale(0.3);
+    --contain: 35%;
+
+    @include animationItem;
+  }
+
+  .item:nth-child(6) {
+    --range: translate3d(20rem, -4rem, 0.1px) rotateX(-80deg) rotateY(-40deg)
+      scale(0.2);
+    --contain: 35%;
+
+    @include animationItem;
+  }
+
+  .item:nth-child(7) {
+    --range: translate3d(12rem, -1rem, 90rem) rotateX(-90deg) rotateY(-70deg)
+      scale(0.05);
+    --contain: 45%;
+
+    @include animationItem;
+  }
+
+  .item:nth-child(8) {
+    --range: translate3d(-5rem, 9rem, 0) rotateX(95deg) rotateY(75deg)
+      scale(0.01);
+    --contain: 55%;
+
+    @include animationItem;
+  }
+
+  .item:nth-child(9) {
+    --range: translate3d(-22rem, 16rem, 0) rotateX(100deg) rotateY(120deg)
+      scale(0.005);
+    --contain: 65%;
+
+    @include animationItem;
+  }
+
+  .item:nth-child(10) {
+    --range: translate3d(20rem, 6rem, 0) rotateX(90deg) rotateY(-90deg)
+      scale(0.0025);
+    --contain: 65%;
+
+    @include animationItem;
+  }
+
+  .item:nth-child(11) {
+    --range: translate3d(-3.5rem, 1.5rem, 0.1px) rotateX(14deg) rotateY(-115deg)
+      scale(0.02);
+    --contain: 55%;
+
+    @include animationItem;
+  }
+
+  .item:nth-child(12) {
+    --range: translate3d(-25rem, 5rem, 0.1px) rotateX(30deg) rotateY(-81deg)
+      scale(0.3);
+    --contain: 35%;
+
+    @include animationItem;
+  }
+
+  .item:nth-child(13) {
+    // --range: translate3d(-40rem, -10rem, 0.1px) rotateX(30deg) rotateY(-45deg) scale(0.3);
+    --range: translate3d(-40rem, -10rem, 0.1px) skew(-23deg, -29deg) scale(0.3);
+    --contain: 25%;
+
+    @include animationItem;
+  }
+
+  .item:nth-child(14) {
+    --range: translate3d(-0.5rem, -30rem, 0.1px) rotateX(80deg) scale(0.4);
+    --contain: 25%;
+
+    @include animationItem;
+  }
+
+  .item:nth-child(15) {
+    --range: translate3d(40rem, -10rem, 0.1px) skew(23deg, 29deg) scale(0.3);
+    --contain: 25%;
+
+    @include animationItem;
+  }
+
+  .item:nth-child(16) {
+    --range: translate3d(25rem, 5rem, 0.1px) rotateX(-30deg) rotateY(-81deg)
+      scale(0.3);
+    --contain: 35%;
+
+    @include animationItem;
+  }
+
+  .item:nth-child(17) {
+    --range: translate3d(3.5rem, 1.5rem, 0.1px) rotateX(-14deg) rotateY(-115deg)
+      scale(0.02);
+    --contain: 55%;
+
+    @include animationItem;
+  }
+
+  .item:nth-child(18) {
+    --range: translate3d(-20rem, 6rem, 0) rotateX(90deg) rotateY(90deg)
+      scale(0.0025);
+    --contain: 65%;
+
+    @include animationItem;
+  }
+
+  .item:nth-child(19) {
+    --range: translate3d(20rem, -6rem, 0) rotateX(-90deg) rotateY(-90deg)
+      scale(0.0025);
+    --contain: 65%;
+
+    @include animationItem;
+  }
+
+  .item:nth-child(20) {
+    --range: translate3d(-3.5rem, -1.5rem, 0.1px) rotateX(14deg) rotateY(115deg)
+      scale(0.02);
+    --contain: 55%;
+
+    @include animationItem;
+  }
+
+  .item:nth-child(21) {
+    --range: translate3d(-25rem, -5rem, 0.1px) rotateX(-30deg) rotateY(-81deg)
+      scale(0.3);
+    --contain: 35%;
+
+    @include animationItem;
+  }
+
+  .item:nth-child(22) {
+    --range: translate3d(-40rem, 10rem, 0.1px) skew(23deg, 29deg) scale(0.3);
+    --contain: 25%;
+
+    @include animationItem;
+  }
+
+  .item:nth-child(23) {
+    --range: translate3d(0.5rem, 30rem, 0.1px) rotateX(-80deg) scale(0.4);
+    --contain: 25%;
+
+    @include animationItem;
+  }
+
+  .item:nth-child(24) {
+    --range: translate3d(40rem, 10rem, 0.1px) skew(-23deg, -29deg) scale(0.3);
+    --contain: 25%;
+
+    @include animationItem;
+  }
+
+  .item:nth-child(25) {
+    --range: translate3d(25rem, -5rem, 0.1px) rotateX(30deg) rotateY(-81deg)
+      scale(0.3);
+    --contain: 35%;
+
+    @include animationItem;
+  }
+
+  .item:nth-child(26) {
+    --range: translate3d(3.5rem, -1.5rem, 0.1px) rotateX(14deg) rotateY(-115deg)
+      scale(0.02);
+    --contain: 55%;
+
+    @include animationItem;
+  }
+
+  .item:nth-child(27) {
+    --range: translate3d(-20rem, -6rem, 0) rotateX(-90deg) rotateY(90deg)
+      scale(0.0025);
+    --contain: 65%;
+
+    @include animationItem;
+  }
+
+  .item:nth-child(28) {
+    --range: translate3d(22rem, -16rem, 0) rotateX(-100deg) rotateY(-120deg)
+      scale(0.005);
+    --contain: 65%;
+
+    @include animationItem;
+  }
+
+  .item:nth-child(29) {
+    --range: translate3d(5rem, -9rem, 0) rotateX(-95deg) rotateY(-75deg)
+      scale(0.01);
+    --contain: 55%;
+
+    @include animationItem;
+  }
+
+  .item:nth-child(30) {
+    --range: translate3d(-12rem, -1rem, 90rem) rotateX(90deg) rotateY(70deg)
+      scale(0.05);
+    --contain: 45%;
+
+    @include animationItem;
+  }
+
+  .item:nth-child(31) {
+    --range: translate3d(-20rem, 4rem, 0.1px) rotateX(80deg) rotateY(40deg)
+      scale(0.2);
+    --contain: 35%;
+
+    @include animationItem;
+  }
+
+  .item:nth-child(32) {
+    --range: translate3d(0.5rem, 20rem, 0.1px) rotateX(-80deg) scale(0.3);
+    --contain: 35%;
+
+    @include animationItem;
+  }
+
+  .item:nth-child(33) {
+    --range: translate3d(20rem, 4rem, 0.1px) rotateX(-80deg) rotateY(40deg)
+      scale(0.2);
+    --contain: 35%;
+
+    @include animationItem;
+  }
+
+  .item:nth-child(34) {
+    --range: translate3d(12rem, -1rem, 90rem) rotateX(90deg) rotateY(-70deg)
+      scale(0.05);
+    --contain: 45%;
+
+    @include animationItem;
+  }
+
+  .item:nth-child(35) {
+    --range: translate3d(-5rem, -9rem, 0) rotateX(-95deg) rotateY(75deg)
+      scale(0.01);
+    --contain: 55%;
+
+    @include animationItem;
+  }
+
+  .item:nth-child(36) {
+    --range: translate3d(-22rem, -16rem, 0) rotateX(-100deg) rotateY(120deg)
+      scale(0.005);
+    --contain: 65%;
+
+    @include animationItem;
+  }
+}
+
+@keyframes slideInSection1 {
+  from {
+    transform: var(--range);
+    background-color: blue;
+    opacity: 0;
+  }
+  to {
+    translate: 0 0;
+    rotate: 0 0;
+    scale: 1;
+    opacity: 1;
+    background-color: red;
+  }
+}

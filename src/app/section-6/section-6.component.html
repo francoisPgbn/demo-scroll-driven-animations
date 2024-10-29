@@ -1,0 +1,14 @@
+<div class="wrapper">
+  <div class="sticky">
+    <div class="grid">
+      @for (faker of fakers; track $index) {
+      <img
+        [src]="faker.src.landscape"
+        [alt]="faker.alt"
+        [id]="faker.id"
+        class="item"
+      />
+      }
+    </div>
+  </div>
+</div>

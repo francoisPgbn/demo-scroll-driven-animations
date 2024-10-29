@@ -1,0 +1,20 @@
+<div class="wrapper">
+  <div class="sticky">
+    <div class="grid">
+      <div class="container">
+        <div class="title">quae debitis ratione</div>
+        <div class="subtitle">culpa vero quae debitis ratione autem sequ saepe ipsum animi nesciunt vitae</div>
+      </div>
+      @for (faker of fakers; track $index) {
+      <img
+        [src]="faker.src.large2x"
+        [alt]="faker.alt"
+        [id]="faker.id"
+        class="item"
+      />
+      }
+    </div>
+  </div>
+</div>
+
+Lorem ipsum dolor sit amet consectetur adipisicing elit. Id quidem labore iste repellat eligendi saepe ipsum animi nesciunt vitae aliquid. Veniam possimus, culpa vero quae debitis ratione autem sequi rerum?
